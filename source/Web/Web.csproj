@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AaronSadler.MegaNavV8.Api, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AaronSadler.MegaNavV8.Api.8.1.1\lib\net472\AaronSadler.MegaNavV8.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="AaronSadler.MegaNavV8.Core, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AaronSadler.MegaNavV8.Core.8.1.1\lib\net472\AaronSadler.MegaNavV8.Core.dll</HintPath>
+    </Reference>
     <Reference Include="AngleSharp, Version=0.9.9.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
       <HintPath>..\packages\AngleSharp.0.9.11\lib\net45\AngleSharp.dll</HintPath>
     </Reference>
@@ -69,8 +75,11 @@
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
-    <Reference Include="ImageProcessor, Version=2.7.0.100, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ImageProcessor.2.7.0.100\lib\net452\ImageProcessor.dll</HintPath>
+    <Reference Include="ImageProcessor, Version=2.8.0.152, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImageProcessor.2.8.0\lib\net452\ImageProcessor.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageProcessor.Plugins.WebP, Version=1.3.0.152, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImageProcessor.Plugins.WebP.1.3.0\lib\net452\ImageProcessor.Plugins.WebP.dll</HintPath>
     </Reference>
     <Reference Include="ImageProcessor.Web, Version=4.10.0.100, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ImageProcessor.Web.4.10.0.100\lib\net452\ImageProcessor.Web.dll</HintPath>
@@ -268,7 +277,13 @@
       <HintPath>..\packages\UmbracoCms.Web.8.8.0\lib\net472\Umbraco.Web.UI.dll</HintPath>
     </Reference>
     <Reference Include="uSync8.BackOffice, Version=8.7.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\uSync.8.7.1\lib\net472\uSync8.BackOffice.dll</HintPath>
+      <HintPath>..\packages\uSync.BackOffice.Core.8.7.1\lib\net472\uSync8.BackOffice.dll</HintPath>
+    </Reference>
+    <Reference Include="uSync8.Community.Contrib, Version=8.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\uSync.Community.Contrib.8.7.1\lib\net472\uSync8.Community.Contrib.dll</HintPath>
+    </Reference>
+    <Reference Include="uSync8.ContentEdition, Version=8.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\uSync.ContentEdition.8.7.1\lib\net472\uSync8.ContentEdition.dll</HintPath>
     </Reference>
     <Reference Include="uSync8.Core, Version=8.7.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\uSync.Core.8.7.1\lib\net472\uSync8.Core.dll</HintPath>
@@ -278,6 +293,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\MeganavV8\Css\editor.css" />
+    <Content Include="App_Plugins\MeganavV8\Js\angular-ui-tree.js" />
+    <Content Include="App_Plugins\MeganavV8\Js\meganavv8.controller.js" />
+    <Content Include="App_Plugins\MeganavV8\Js\meganavv8.resource.js" />
+    <Content Include="App_Plugins\MeganavV8\Views\editor.html" />
+    <Content Include="App_Plugins\MeganavV8\Views\settings.html" />
     <Content Include="App_Plugins\Our.Umbraco.Matryoshka\content-interceptor.js" />
     <Content Include="App_Plugins\Our.Umbraco.Matryoshka\directives\matryoshka-tabbed-content.directive.js" />
     <Content Include="App_Plugins\Our.Umbraco.Matryoshka\directives\matryoshka-tabbed-content.html" />
@@ -339,6 +360,7 @@
     <Content Include="config\Lang\zh-CN.user.xml" />
     <Content Include="config\logviewer.searches.config.js" />
     <Content Include="Global.asax" />
+    <Content Include="Static\Placeholders\article-listing-placehlder.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -361,6 +383,7 @@
     <Content Include="App_Plugins\uSync8\addons.json" />
     <Content Include="App_Plugins\Vizioz.PalettePicker\package.manifest" />
     <Content Include="App_Plugins\Our.Umbraco.Matryoshka\package.manifest" />
+    <Content Include="App_Plugins\MeganavV8\package.manifest" />
     <None Include="packages.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Partials\Grid\Editors\Textstring.cshtml" />
@@ -376,6 +399,13 @@
     <Content Include="Views\Website.cshtml" />
     <Content Include="Views\_Layout.cshtml" />
     <Content Include="Views\Partials\Seo.cshtml" />
+    <Content Include="Views\ContentPage.cshtml" />
+    <Content Include="Views\ArticlePage.cshtml" />
+    <Content Include="Views\Partials\_PageBanner.cshtml" />
+    <Content Include="Views\FAQPage.cshtml" />
+    <Content Include="Views\ArticlesLandingPage.cshtml" />
+    <Content Include="Views\EventsLandingPage.cshtml" />
+    <Content Include="Views\EventPage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

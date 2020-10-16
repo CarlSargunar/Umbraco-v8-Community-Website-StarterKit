@@ -21,7 +21,7 @@ namespace Our.Umbraco.NonProfitFramework.Core.Models
 {
 	/// <summary>Website</summary>
 	[PublishedModel("website")]
-	public partial class Website : PublishedContentModel
+	public partial class Website : PublishedContentModel, ISettings
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -43,5 +43,26 @@ namespace Our.Umbraco.NonProfitFramework.Core.Models
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Footer Navigation
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.8.0")]
+		[ImplementPropertyType("footerNavigation")]
+		public global::System.Collections.Generic.IEnumerable<global::AaronSadler.MegaNavV8.Core.Models.MeganavV8Item> FooterNavigation => this.Value<global::System.Collections.Generic.IEnumerable<global::AaronSadler.MegaNavV8.Core.Models.MeganavV8Item>>("footerNavigation");
+
+		///<summary>
+		/// Main Navigation
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.8.0")]
+		[ImplementPropertyType("mainNavigation")]
+		public global::System.Collections.Generic.IEnumerable<global::AaronSadler.MegaNavV8.Core.Models.MeganavV8Item> MainNavigation => this.Value<global::System.Collections.Generic.IEnumerable<global::AaronSadler.MegaNavV8.Core.Models.MeganavV8Item>>("mainNavigation");
+
+		///<summary>
+		/// Redir
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.8.0")]
+		[ImplementPropertyType("umbracoInternalRedirectId")]
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent UmbracoInternalRedirectId => global::Our.Umbraco.NonProfitFramework.Core.Models.Settings.GetUmbracoInternalRedirectId(this);
 	}
 }

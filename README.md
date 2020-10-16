@@ -1,9 +1,23 @@
-# Umbraco-v8-Community-Website-StarterKit
+# Non Profit Org Starter project/kit for Umbraco v8
+[![Build status](https://ci.appveyor.com/api/projects/status/0m4c9m5ko2wfsfut?svg=true)](https://ci.appveyor.com/project/TimGeyssens/umbraco-v8-community-website-starterkit)
+
 The goal of this repo is to have a community maintained starter project/kit for #umbraco v8 following best practices.
 
-Backend user: people@umbracocommunity.com
-Backend pw: g5##fsS?TK4xfN*J
+For more details check out the blog post: [https://dev.to/timgeyssens/how-to-join-the-fun-and-get-started-with-contributing-to-the-umbraco-community-starter-project-kit-36gn](https://dev.to/timgeyssens/how-to-join-the-fun-and-get-started-with-contributing-to-the-umbraco-community-starter-project-kit-36gn)
 
-Don't commit the db, use the usync files, run usync import after initial startup.
+## Backend credentials
+- Backend user: people@umbracocommunity.com
+- Backend pw: g5##fsS?TK4xfN*J
+
+## Details for pull request
+**Don't commit the db** (the file Umbraco.sdf), use the usync files, **run usync import after initial startup** (and also if you fetch new commits from origin)
+
+## Getting Started Guide ##
+
+We have started putting together the getting-started guide for this project for anyone who is new to Visual Studio and Umbraco. Please see [/docs/](/docs/readme.md)
+
+## Design preview
+### Homepage (on mobile)
+![mobile homepage preview](https://dev-to-uploads.s3.amazonaws.com/i/7g2wmtxfbz63x6kzhuvy.png)
 
 

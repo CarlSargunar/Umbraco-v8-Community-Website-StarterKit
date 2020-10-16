@@ -35,9 +35,13 @@ namespace Our.Umbraco.NonProfitFramework.Core.Models
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.8.0")]
 		global::Umbraco.Core.Models.PublishedContent.IPublishedContent Image { get; }
 
-		/// <summary>Pagetitle</summary>
+		/// <summary>Page Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.8.0")]
 		string Pagetitle { get; }
+
+		/// <summary>Tags</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.8.0")]
+		global::System.Collections.Generic.IEnumerable<string> Tags { get; }
 	}
 
 	/// <summary>SEO</summary>
@@ -66,7 +70,7 @@ namespace Our.Umbraco.NonProfitFramework.Core.Models
 		// properties
 
 		///<summary>
-		/// Canonical URL
+		/// Canonical URL: Specify a canonical URL is there is a preferred version of the web page
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.8.0")]
 		[ImplementPropertyType("canonicalURL")]
@@ -77,7 +81,7 @@ namespace Our.Umbraco.NonProfitFramework.Core.Models
 		public static global::Umbraco.Web.Models.Link GetCanonicalUrl(ISeo that) => that.Value<global::Umbraco.Web.Models.Link>("canonicalURL");
 
 		///<summary>
-		/// Description
+		/// Description: A brief summary of the web page
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.8.0")]
 		[ImplementPropertyType("description")]
@@ -88,7 +92,7 @@ namespace Our.Umbraco.NonProfitFramework.Core.Models
 		public static string GetDescription(ISeo that) => that.Value<string>("description");
 
 		///<summary>
-		/// Image
+		/// Image: The image used when the web pages link is shared
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.8.0")]
 		[ImplementPropertyType("image")]
@@ -99,14 +103,25 @@ namespace Our.Umbraco.NonProfitFramework.Core.Models
 		public static global::Umbraco.Core.Models.PublishedContent.IPublishedContent GetImage(ISeo that) => that.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("image");
 
 		///<summary>
-		/// Pagetitle
+		/// Page Title: A meaningful title for the web page
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.8.0")]
 		[ImplementPropertyType("pagetitle")]
 		public string Pagetitle => GetPagetitle(this);
 
-		/// <summary>Static getter for Pagetitle</summary>
+		/// <summary>Static getter for Page Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.8.0")]
 		public static string GetPagetitle(ISeo that) => that.Value<string>("pagetitle");
+
+		///<summary>
+		/// Tags: A series of keywords relevant to the content available on the web page
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.8.0")]
+		[ImplementPropertyType("tags")]
+		public global::System.Collections.Generic.IEnumerable<string> Tags => GetTags(this);
+
+		/// <summary>Static getter for Tags</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.8.0")]
+		public static global::System.Collections.Generic.IEnumerable<string> GetTags(ISeo that) => that.Value<global::System.Collections.Generic.IEnumerable<string>>("tags");
 	}
 }
